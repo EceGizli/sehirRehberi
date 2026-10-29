@@ -257,7 +257,10 @@ function App() {
       <div className="filters">
         <select
           value={selectedCity}
-          onChange={(e) => setSelectedCity(e.target.value)}
+          onChange={(e) => {
+            setSelectedCity(e.target.value);
+            setSelectedCategory("");
+          }}
         >
           <option value="">Tüm Şehirler</option>
 
