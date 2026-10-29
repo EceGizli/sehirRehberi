@@ -206,10 +206,17 @@ function App() {
     });
   };
 
+  const goHome = () => {
+    setSearch("");
+    setSelectedCity("");
+    setSelectedCategory("");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="container">
       <div className="top-bar">
-        <h1>ŞEHİR REHBERİ</h1>
+        <h1 onClick={goHome}>ŞEHİR REHBERİ</h1>
 
         <div className="login-area">
           {currentUser ? (
