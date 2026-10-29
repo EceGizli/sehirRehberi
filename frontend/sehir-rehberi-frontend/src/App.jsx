@@ -110,8 +110,7 @@ function App() {
   const filteredPlaces = places.filter((place) => {
     const searchMatch =
       place.placeName.toLowerCase().includes(search.toLowerCase()) ||
-      place.address.toLowerCase().includes(search.toLowerCase()) ||
-      place.description.toLowerCase().includes(search.toLowerCase());
+      place.address.toLowerCase().includes(search.toLowerCase());
 
     const cityMatch =
       selectedCity === "" || String(place.cityid) === String(selectedCity);
@@ -255,7 +254,7 @@ function App() {
 
       <input
         type="text"
-        placeholder="Mekan, adres veya açıklama ara..."
+        placeholder="Mekan veya adres ara..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className="search"
